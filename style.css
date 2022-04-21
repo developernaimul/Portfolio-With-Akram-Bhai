@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body,
+p,
+span,
+small,
+strong{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #1E1E49;
+}
+p{
+    color: #adb5bd;
+}
+body{
+    background: #F8F9FA;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul li{
+    list-style: none;
+}
+
+.fixed-width{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+header.sticky{
+    background: #0657CD;
+}
+.logo2{
+    display: none;
+}
+header.sticky nav .logo a.logo2{
+    display: inline-block;
+}
+header.sticky nav .logo a.logo1{
+    display: none;
+}
+header.sticky{
+    height: 70px;
+}
+
+
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+    margin: 0 auto;
+}
+header nav .logo{}
+header nav .logo a{}
+header nav .logo a img{
+    width: 200px;
+    position: relative;
+    bottom: -5px;
+}
+
+header nav .menu{}
+header nav .menu ul{
+    display: flex;
+}
+header nav .menu ul li{}
+header nav .menu ul li a{
+    display: inline-block;
+    color: #999999;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 15px;
+    position: relative;
+    transition: 0.5s;
+}
+header.sticky nav .menu ul li a{
+    color: #fff;
+}
+header nav .menu ul li a:hover{}
+
+
+header nav .menu ul li a::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 13%;
+    width: 0%;
+    height: 3px;
+    background: #FF7381;
+    transition: all 0.5s;
+}
+
+header nav .menu ul li a.active::after,
+header nav .menu ul li a:hover:after{
+    width: 74%;
+}
+
+
+.test1{
+    width: 100%;
+    background: #000;
+    height: 80vh;
+}
+.test2{
+    width: 100%;
+    background: orange;
+    height: 80vh;
+}
